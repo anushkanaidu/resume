@@ -1,3 +1,3 @@
 # Resume — Anushka Naidu Maddisetty
 
-[CLICK](https://anushkanaidu.github.io/resume/anushka_resume.html)
+📄 [View resume online](https://anushkanaidu.github.io/resume/anushka_resume.html) · [Download PDF](https://anushkanaidu.github.io/resume/Anushka_Maddisetty_Resume.pdf)
