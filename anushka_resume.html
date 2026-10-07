@@ -4,28 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anushka Naidu Maddisetty — Resume</title>
+<meta name="description" content="Anushka Naidu Maddisetty — MS Data Science, Seattle University. Behavioral analytics, experimentation, machine learning.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#1a1a1a;padding:2rem 1rem}
 .wrap{max-width:860px;margin:0 auto}
+a{color:#534AB7;text-decoration:none}
+a:hover{text-decoration:underline}
 .hero{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;padding-bottom:1.75rem;margin-bottom:1.75rem;border-bottom:0.5px solid #CECBF6}
 .name{font-size:28px;font-weight:500;letter-spacing:-0.3px;margin-bottom:4px}
 .tagline{font-size:11px;color:#534AB7;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:12px;font-weight:500}
-.bio{font-size:13px;color:#555;line-height:1.75;max-width:460px}
+.bio{font-size:13px;color:#555;line-height:1.75;max-width:480px}
+.seeking{font-size:12px;color:#3C3489;margin-top:10px;font-weight:500}
 .pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
 .pill{font-size:10px;padding:3px 11px;border-radius:20px;border:0.5px solid #CECBF6;color:#534AB7;background:#EEEDFE}
 .contact-col{display:flex;flex-direction:column;gap:7px;align-items:flex-end;padding-top:2px}
 .avatar{width:54px;height:54px;border-radius:50%;background:#EEEDFE;border:1.5px solid #CECBF6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:500;color:#534AB7;margin-bottom:10px}
 .contact-item{font-size:11px;color:#555;display:flex;align-items:center;gap:5px}
-.contact-item a{color:#534AB7;text-decoration:none}
+.pdf-btn{margin-top:6px;font-size:11px;font-weight:500;color:#fff;background:#534AB7;padding:5px 12px;border-radius:14px;display:inline-flex;align-items:center;gap:5px}
+.pdf-btn:hover{text-decoration:none;background:#3C3489}
 .body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:14px}
 .sec-label{font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#7F77DD;margin-bottom:10px;padding-bottom:5px;border-bottom:1px solid #CECBF6}
 .card{background:#fff;border:0.5px solid #CECBF6;border-radius:12px;padding:1rem 1.1rem;margin-bottom:10px}
 .card:last-child{margin-bottom:0}
-.proj-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px}
+.proj-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:5px}
 .proj-title{font-size:13px;font-weight:500;color:#1a1a1a}
-.proj-live{font-size:10px;color:#534AB7;text-decoration:none;display:flex;align-items:center;gap:3px;white-space:nowrap;background:#EEEDFE;padding:2px 8px;border-radius:10px;border:0.5px solid #CECBF6}
+.proj-links{display:flex;gap:4px;flex-shrink:0}
+.proj-live{font-size:10px;color:#534AB7;display:flex;align-items:center;gap:3px;white-space:nowrap;background:#EEEDFE;padding:2px 8px;border-radius:10px;border:0.5px solid #CECBF6}
 .proj-metric{font-size:10px;color:#3C3489;background:#EEEDFE;padding:2px 9px;border-radius:10px;display:inline-block;margin-bottom:7px;border:0.5px solid #CECBF6}
 .proj-sub{font-size:12px;color:#555;line-height:1.6;margin-bottom:8px}
 .tags{display:flex;flex-wrap:wrap;gap:4px}
@@ -33,13 +39,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tp{background:#EEEDFE;color:#3C3489;border:0.5px solid #CECBF6}
 .tt{background:#E1F5EE;color:#085041;border:0.5px solid #9FE1CB}
 .ta{background:#FAEEDA;color:#633806;border:0.5px solid #FAC775}
-.skill-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.skill-name{font-size:11px;color:#555;width:72px;flex-shrink:0}
-.track{flex:1;height:4px;background:#EEEDFE;border-radius:4px;overflow:hidden}
-.fill{height:100%;border-radius:4px}
+.skill-group{margin-bottom:10px}
+.skill-group:last-child{margin-bottom:0}
+.skill-head{font-size:11px;font-weight:500;color:#1a1a1a;margin-bottom:5px}
 .edu-title{font-size:13px;font-weight:500;color:#1a1a1a}
 .edu-meta{font-size:11px;color:#555;margin-top:2px;line-height:1.5}
-.badge{font-size:10px;background:#EEEDFE;color:#3C3489;border:0.5px solid #CECBF6;padding:2px 9px;border-radius:10px;display:inline-block;margin-top:5px}
+.badge{font-size:10px;background:#EEEDFE;color:#3C3489;border:0.5px solid #CECBF6;padding:2px 9px;border-radius:10px;display:inline-block;margin-top:5px;margin-right:3px}
 .exp-item{display:flex;gap:10px;margin-bottom:13px}
 .exp-item:last-child{margin-bottom:0}
 .dot{width:6px;height:6px;border-radius:50%;background:#7F77DD;margin-top:4px;flex-shrink:0}
@@ -48,9 +53,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .exp-desc{font-size:11px;color:#555;line-height:1.55;margin-top:4px}
 .cert-item{display:flex;align-items:center;gap:7px;font-size:11px;color:#555;padding:5px 0;border-bottom:0.5px solid #CECBF6}
 .cert-item:last-child{border-bottom:none}
-.leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:#555}
-.leg-sq{width:8px;height:8px;border-radius:2px;flex-shrink:0}
 .divider{border-top:0.5px solid #CECBF6;margin:10px 0}
+@media (max-width:680px){
+  .hero{grid-template-columns:1fr;gap:1rem}
+  .contact-col{align-items:flex-start}
+  .avatar{display:none}
+  .body{grid-template-columns:1fr}
+}
+@media print{
+  body{padding:0}
+  .pdf-btn{display:none}
+}
 </style>
 </head>
 <body>
@@ -58,18 +71,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="hero">
     <div>
       <div class="name">Anushka Naidu Maddisetty</div>
-      <div class="tagline">MS Data Science &nbsp;·&nbsp; Psychology &nbsp;·&nbsp; AI & Human-Centered Analytics</div>
-      <div class="bio">Graduate student at the intersection of data science and human behavior. My psychology background shapes how I approach data — I build systems that are technically rigorous and designed for real people making real decisions. Currently building with LLMs, NLP pipelines, and predictive models.</div>
+      <div class="tagline">MS Data Science Student &nbsp;·&nbsp; Psychology Background &nbsp;·&nbsp; AI &amp; Human-Centered Analytics</div>
+      <div class="bio">Data science graduate student with a psychology research background. I bring training in experimental design and statistics to machine learning and analytics: start with the question, test the assumptions, and be clear about what the data can and can't support.</div>
+      <div class="seeking">Seeking Summer 2027 internships and full-time roles starting mid-2027.</div>
       <div class="pills">
-        <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Machine Learning</span><span class="pill">NLP</span><span class="pill">React</span><span class="pill">LLM Applications</span><span class="pill">Statistical Modeling</span>
+        <span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Machine Learning</span><span class="pill">NLP</span><span class="pill">Behavioral Analytics</span><span class="pill">LLM Applications</span>
       </div>
     </div>
     <div class="contact-col">
       <div class="avatar">AN</div>
       <div class="contact-item"><i class="ti ti-map-pin" style="font-size:13px;color:#7F77DD"></i>Seattle, WA</div>
-      <div class="contact-item"><i class="ti ti-mail" style="font-size:13px;color:#7F77DD"></i>anushkanaidu.m@gmail.com</div>
+      <div class="contact-item"><i class="ti ti-mail" style="font-size:13px;color:#7F77DD"></i><a href="mailto:anushkanaidu.m@gmail.com">anushkanaidu.m@gmail.com</a></div>
       <div class="contact-item"><i class="ti ti-brand-github" style="font-size:13px;color:#7F77DD"></i><a href="https://github.com/anushkanaidu">github.com/anushkanaidu</a></div>
       <div class="contact-item"><i class="ti ti-brand-linkedin" style="font-size:13px;color:#7F77DD"></i><a href="https://linkedin.com/in/anushka-naidu-maddisetty-24b146204">LinkedIn</a></div>
+      <a class="pdf-btn" href="Anushka_Maddisetty_Resume.pdf" download><i class="ti ti-download" style="font-size:12px"></i>Download PDF</a>
     </div>
   </div>
 
@@ -79,95 +94,113 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
       <div class="card">
         <div class="proj-header">
-          <div class="proj-title">OpsCore — HR Intelligence Dashboard</div>
-          <a class="proj-live" href="https://opscore-dashboard.netlify.app"><i class="ti ti-external-link" style="font-size:11px"></i>Live</a>
+          <div class="proj-title">Customer Retention Analytics</div>
+          <div class="proj-links">
+            <a class="proj-live" href="https://anushka-customer-retention.netlify.app/"><i class="ti ti-external-link" style="font-size:11px"></i>Live</a>
+            <a class="proj-live" href="https://github.com/anushkanaidu/customer-retention-analytics"><i class="ti ti-brand-github" style="font-size:11px"></i>Code</a>
+          </div>
         </div>
-        <div><span class="proj-metric">500+ employees tracked · AI-powered summaries</span></div>
-        <div class="proj-sub">Full-stack HR dashboard with compliance-risk views, employee lifecycle tracking, and AI-powered summaries. Architected around a real HR operations brief using Gemini and Claude APIs.</div>
-        <div class="tags"><span class="tag tp">React</span><span class="tag tp">TypeScript</span><span class="tag tp">Claude API</span><span class="tag tp">Gemini</span><span class="tag tt">Tailwind</span><span class="tag tt">Netlify</span></div>
+        <div><span class="proj-metric">ROC-AUC 0.795 · 1,204 customers = 78.5% of spend</span></div>
+        <div class="proj-sub">Cleaned 776,594 transactions from 5,852 customers (UCI Online Retail II) and built four RFM segments. Predicted 180-day purchase inactivity using a time-based cutoff to prevent target leakage; Random Forest reached ROC-AUC 0.795 and recall 0.748 on held-out data. Combining risk with customer value showed only 34 customers were high-value and high-risk, supporting a protect-vs.-intervene retention strategy.</div>
+        <div class="tags"><span class="tag tp">Python</span><span class="tag tp">Scikit-learn</span><span class="tag tt">React</span><span class="tag tt">Node.js</span><span class="tag ta">Gemini API</span></div>
       </div>
 
       <div class="card">
-        <div class="proj-title" style="margin-bottom:5px">Social Media Sentiment & Engagement Analytics</div>
-        <div><span class="proj-metric">Statistical testing across content categories</span></div>
-        <div class="proj-sub">NLP classification pipeline using VADER to classify post sentiment and quantify its effect on engagement metrics. Applied statistical testing to validate polarity-engagement relationships.</div>
-        <div class="tags"><span class="tag tp">Python</span><span class="tag tp">NLTK</span><span class="tag tp">VADER</span><span class="tag tt">Pandas</span></div>
+        <div class="proj-header">
+          <div class="proj-title">OpsCore — HR Analytics Dashboard</div>
+          <div class="proj-links">
+            <a class="proj-live" href="https://opscore-dashboard.netlify.app"><i class="ti ti-external-link" style="font-size:11px"></i>Live</a>
+            <a class="proj-live" href="https://github.com/anushkanaidu/opscore-dashboard"><i class="ti ti-brand-github" style="font-size:11px"></i>Code</a>
+          </div>
+        </div>
+        <div><span class="proj-metric">Synthetic 500-employee dataset · 52 SLA breaches flagged</span></div>
+        <div class="proj-sub">Built and deployed a full-stack HR dashboard spanning hiring, onboarding, compliance, and offboarding. Flagged 52 background-check SLA breaches, 206 high flight-risk employees, and a 50.3% compliance gap; integrated LLM APIs to generate plain-language summaries for HR managers.</div>
+        <div class="tags"><span class="tag tp">React</span><span class="tag tp">TypeScript</span><span class="tag tp">Python</span><span class="tag ta">Gemini API</span><span class="tag ta">Claude API</span></div>
       </div>
 
       <div class="card">
-        <div class="proj-title" style="margin-bottom:5px">Education Equity & Test Score Analysis</div>
-        <div><span class="proj-metric">R² = 0.628 · 3-predictor reduced model</span></div>
-        <div class="proj-sub">Regression modeling and hypothesis testing on ACT/SAT outcomes from socioeconomic indicators across U.S. schools. Demonstrated feature selection and interpretability tradeoffs.</div>
-        <div class="tags"><span class="tag tp">Scikit-learn</span><span class="tag tt">Statsmodels</span><span class="tag ta">Seaborn</span></div>
+        <div class="proj-title" style="margin-bottom:5px">Energy-Cost Framing in LLM Interactions</div>
+        <div><span class="proj-metric">Research in progress · Seattle University</span></div>
+        <div class="proj-sub">Designing a controlled online experiment testing whether framing LLM energy costs as everyday equivalents vs. technical units reduces token use per task without lowering task performance or user satisfaction.</div>
+        <div class="tags"><span class="tag tp">Experimental Design</span><span class="tag tt">Human–AI Interaction</span><span class="tag ta">Sustainable AI</span></div>
       </div>
 
       <div class="card">
-        <div class="proj-title" style="margin-bottom:5px">Disaster Impact & Federal Aid Prediction</div>
-        <div><span class="proj-metric">Cross-source schema alignment · class imbalance</span></div>
-        <div class="proj-sub">Feature engineering from merged FEMA declarations and Census demographic data to train a predictive model for aid allocation. Handled schema mismatches and class imbalance during preprocessing.</div>
-        <div class="tags"><span class="tag tp">Pandas</span><span class="tag tp">Scikit-learn</span><span class="tag tt">Python</span></div>
+        <div class="proj-header">
+          <div class="proj-title">Education Equity &amp; Test Score Analysis</div>
+          <div class="proj-links">
+            <a class="proj-live" href="https://github.com/anushkanaidu/Education-Project-"><i class="ti ti-brand-github" style="font-size:11px"></i>Code</a>
+          </div>
+        </div>
+        <div><span class="proj-metric">R² = 0.628 · 3-predictor model</span></div>
+        <div class="proj-sub">Modeled ACT/SAT outcomes from socioeconomic indicators across U.S. schools with linear regression; reduced the model to three predictors while retaining R² = 0.628, prioritizing interpretability.</div>
+        <div class="tags"><span class="tag tp">Python</span><span class="tag tt">Statsmodels</span><span class="tag tt">Scikit-learn</span></div>
       </div>
+
+      <div style="height:4px"></div>
+      <div class="sec-label">Experience</div>
+      <div class="card">
+        <div class="exp-item">
+          <div class="dot"></div>
+          <div>
+            <div class="exp-title">Desk Assistant</div>
+            <div class="exp-meta">Housing &amp; Residence Life, Seattle University · Sep 2025–Present</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="dot"></div>
+          <div>
+            <div class="exp-title">Teaching Assistant — Psych 121: Methods &amp; Statistics</div>
+            <div class="exp-meta">CSU Sacramento · Aug–Dec 2024</div>
+            <div class="exp-desc">Explained hypothesis testing, research design, and SPSS analysis in office hours and class discussions; graded work with feedback on statistical reasoning.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="dot"></div>
+          <div>
+            <div class="exp-title">Supplemental Instruction Leader — Statistics</div>
+            <div class="exp-meta">CSU Sacramento · PARC · Feb–Dec 2024</div>
+            <div class="exp-desc">Led weekly sessions on descriptive and inferential statistics through worked problems and evidence-based study strategies.</div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div>
       <div class="sec-label">Skills</div>
       <div class="card" style="margin-bottom:10px">
-        <div class="skill-row"><span class="skill-name">Python</span><div class="track"><div class="fill" style="width:93%;background:#7F77DD"></div></div></div>
-        <div class="skill-row"><span class="skill-name">ML / Scikit</span><div class="track"><div class="fill" style="width:80%;background:#7F77DD"></div></div></div>
-        <div class="skill-row"><span class="skill-name">Statistics</span><div class="track"><div class="fill" style="width:86%;background:#534AB7"></div></div></div>
-        <div class="skill-row"><span class="skill-name">NLP</span><div class="track"><div class="fill" style="width:78%;background:#534AB7"></div></div></div>
-        <div class="skill-row"><span class="skill-name">LLM APIs</span><div class="track"><div class="fill" style="width:83%;background:#AFA9EC"></div></div></div>
-        <div class="skill-row"><span class="skill-name">SQL</span><div class="track"><div class="fill" style="width:74%;background:#AFA9EC"></div></div></div>
-        <div class="skill-row"><span class="skill-name">React</span><div class="track"><div class="fill" style="width:64%;background:#CECBF6"></div></div></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
-          <span class="leg-item"><span class="leg-sq" style="background:#7F77DD"></span>Python/ML</span>
-          <span class="leg-item"><span class="leg-sq" style="background:#534AB7"></span>Stats/NLP</span>
-          <span class="leg-item"><span class="leg-sq" style="background:#AFA9EC"></span>AI/Dev</span>
-          <span class="leg-item"><span class="leg-sq" style="background:#CECBF6"></span>Web</span>
-        </div>
+        <div class="skill-group"><div class="skill-head">Languages</div><div class="tags"><span class="tag tp">Python</span><span class="tag tp">SQL</span><span class="tag tp">TypeScript</span></div></div>
+        <div class="skill-group"><div class="skill-head">ML &amp; Statistics</div><div class="tags"><span class="tag tp">Scikit-learn</span><span class="tag tp">Statsmodels</span><span class="tag tp">Regression</span><span class="tag tp">Classification</span><span class="tag tp">Clustering</span><span class="tag tp">A/B Testing</span><span class="tag tp">Experimental Design</span></div></div>
+        <div class="skill-group"><div class="skill-head">Data &amp; Analytics</div><div class="tags"><span class="tag tt">Pandas</span><span class="tag tt">NumPy</span><span class="tag tt">EDA</span><span class="tag tt">RFM Segmentation</span><span class="tag tt">Churn Modeling</span><span class="tag tt">NLP (NLTK)</span><span class="tag tt">SPSS</span></div></div>
+        <div class="skill-group"><div class="skill-head">Visualization &amp; BI</div><div class="tags"><span class="tag tt">Tableau</span><span class="tag tt">Altair</span><span class="tag tt">Matplotlib</span><span class="tag tt">Seaborn</span></div></div>
+        <div class="skill-group"><div class="skill-head">Big Data &amp; Cloud</div><div class="tags"><span class="tag ta">PySpark</span><span class="tag ta">Spark SQL</span><span class="tag ta">AWS EC2</span><span class="tag ta">S3</span><span class="tag ta">Athena</span><span class="tag ta">EMR</span><span class="tag ta">Lambda</span></div></div>
+        <div class="skill-group"><div class="skill-head">GenAI &amp; LLMs</div><div class="tags"><span class="tag ta">Claude &amp; Gemini APIs</span><span class="tag ta">Prompt Engineering</span><span class="tag ta">LLM Evaluation</span><span class="tag ta">AI Agents (Google ADK, MCP)</span></div></div>
+        <div class="skill-group"><div class="skill-head">Tools &amp; Deployment</div><div class="tags"><span class="tag tp">Git/GitHub</span><span class="tag tp">Jupyter</span><span class="tag tp">MySQL</span><span class="tag tp">MongoDB</span><span class="tag tp">React</span><span class="tag tp">Node.js/Express</span><span class="tag tp">Streamlit</span><span class="tag tp">Netlify</span></div></div>
       </div>
 
       <div class="sec-label">Education</div>
       <div class="card" style="margin-bottom:10px">
         <div style="margin-bottom:10px">
           <div class="edu-title">M.S. Data Science</div>
-          <div class="edu-meta">Seattle University · Exp. Dec 2027</div>
-          <div class="edu-meta">ML · Statistical Modeling · Database Systems</div>
+          <div class="edu-meta">Seattle University · Expected June 2027</div>
+          <div class="edu-meta">Big Data Analytics · Applied Statistical Inference &amp; Experimental Design · Data Management (SQL) · Data Visualization</div>
+          <span class="badge">GPA 3.8</span>
         </div>
         <div class="divider"></div>
         <div>
           <div class="edu-title">B.S. Psychology</div>
           <div class="edu-meta">CSU Sacramento · May 2025</div>
-          <div class="edu-meta">Research Methods · Behavioral Statistics</div>
-          <span class="badge">GPA 3.8</span>
+          <div class="edu-meta">Advanced Methods &amp; Statistics in Psychological Research · Statistics for Psychology · Cognitive Psychology · Social Psychology</div>
+          <span class="badge">GPA 3.8</span><span class="badge">Dean's Honor List · 4 terms</span>
         </div>
       </div>
 
-      <div class="sec-label">Experience</div>
-      <div class="card" style="margin-bottom:10px">
-        <div class="exp-item">
-          <div class="dot"></div>
-          <div>
-            <div class="exp-title">Teaching Assistant — Psych 121</div>
-            <div class="exp-meta">CSU Sacramento · Aug–Dec 2024</div>
-            <div class="exp-desc">Feedback on research methods and stats coursework; office hours using IBM SPSS.</div>
-          </div>
-        </div>
-        <div class="exp-item">
-          <div class="dot"></div>
-          <div>
-            <div class="exp-title">SI Leader — Biology</div>
-            <div class="exp-meta">CSU Sacramento · PARC · Feb–Dec 2024</div>
-            <div class="exp-desc">Weekly sessions on biology topics and evidence-based study strategies.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sec-label">Certifications</div>
+      <div class="sec-label">Certifications &amp; Coursework</div>
       <div class="card">
+        <div class="cert-item"><i class="ti ti-school" style="font-size:14px;color:#7F77DD"></i>Statistical Machine Learning (UIUC)</div>
         <div class="cert-item"><i class="ti ti-rosette" style="font-size:14px;color:#7F77DD"></i>IBM Data Science Professional</div>
-        <div class="cert-item"><i class="ti ti-rosette" style="font-size:14px;color:#7F77DD"></i>Google Data Analytics Professional</div>
-        <div class="cert-item"><i class="ti ti-rosette" style="font-size:14px;color:#7F77DD"></i>UC San Diego Linear Algebra for ML</div>
+        <div class="cert-item"><i class="ti ti-rosette" style="font-size:14px;color:#7F77DD"></i>IBM AI Engineering Professional (in progress)</div>
         <div class="cert-item"><i class="ti ti-rosette" style="font-size:14px;color:#7F77DD"></i>Google Python</div>
       </div>
     </div>
